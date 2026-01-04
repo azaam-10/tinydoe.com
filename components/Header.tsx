@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           <h3 className="text-white text-[15px] font-semibold opacity-90">My Account</h3>
           <div className="flex items-baseline space-x-1.5 mt-2">
             <span className="text-white/90 text-[12px] font-medium">USDT</span>
-            <span className="text-white text-[24px] font-bold leading-none">723.1056</span>
+            <span className="text-white text-[24px] font-bold leading-none">299.586</span>
           </div>
         </div>
 
