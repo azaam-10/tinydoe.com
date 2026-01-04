@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
-import { NavTab } from './types';
-import Header from './components/Header';
-import FeatureGrid from './components/FeatureGrid';
-import MenuList from './components/MenuList';
-import BottomNav from './components/BottomNav';
-import TaskModal from './components/TaskModal';
+import { NavTab } from './types.ts';
+import Header from './components/Header.tsx';
+import FeatureGrid from './components/FeatureGrid.tsx';
+import MenuList from './components/MenuList.tsx';
+import BottomNav from './components/BottomNav.tsx';
+import TaskModal from './components/TaskModal.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<NavTab>(NavTab.MINE);
