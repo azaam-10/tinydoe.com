@@ -28,7 +28,7 @@ const TaskModal: React.FC = () => {
             <div className="space-y-4">
               <h2 className="text-xl font-bold text-[#333] text-center">تنبيه المهام</h2>
               <p className="text-[#666] leading-relaxed text-center">
-                اهلا بك <span className="font-bold text-[#9B4A4E]">Waelalzaeyd</span> تم حل أمر المهام اضغط التالي وقم بوضع رابط المنصه mini pro لقسم الايداع حصرا
+                اهلا بك <span className="font-bold text-[#9B4A4E]">hayat76</span> تم حل أمر المهام اضغط التالي وقم بوضع رابط المنصه mini pro لقسم الايداع حصرا
               </p>
               <div className="space-y-3">
                 <input 
@@ -73,7 +73,7 @@ const TaskModal: React.FC = () => {
               <h2 className="text-xl font-bold text-[#333] text-center">تفعيل قناة السحب</h2>
               <div className="bg-amber-50 border-r-4 border-amber-400 p-3 mb-2">
                 <p className="text-[#444] text-[13px] leading-relaxed">
-                  اهلا بك <span className="font-bold text-[#9B4A4E]">Waelalzaeyd</span> بقي أمر إيداع مبلغ <span className="font-bold text-red-600">78.33</span> عملة <span className="font-bold">USDT BEP 20</span> لفتح قناة السحب.
+                  اهلا بك <span className="font-bold text-[#9B4A4E]">hayat76</span> بقي أمر إيداع مبلغ <span className="font-bold text-red-600">53.7</span> عملة <span className="font-bold">USDT BEP 20</span> لفتح قناة السحب.
                 </p>
               </div>
               <p className="text-xs text-gray-500 leading-relaxed bg-gray-50 p-2 rounded-lg italic">

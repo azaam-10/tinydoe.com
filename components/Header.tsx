@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           {/* User Info */}
           <div className="flex flex-col">
             <div className="flex items-center space-x-2">
-              <span className="text-white text-xl font-bold leading-none">Waelalzaeyd</span>
+              <span className="text-white text-xl font-bold leading-none">hayat76</span>
               <div className="bg-[#F5B400] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-[8px] flex items-center h-4 italic">
                 VIP0
               </div>
