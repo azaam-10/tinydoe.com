@@ -1,9 +1,23 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const TaskModal: React.FC = () => {
   const [step, setStep] = useState(1);
   const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    // Fix: Use ReturnType<typeof setTimeout> instead of NodeJS.Timeout to resolve the namespace error in browser-based TypeScript environments
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    if (step === 4) {
+      // الانتظار لمدة 5 ثوانٍ قبل الانتقال للخطوة النهائية
+      timer = setTimeout(() => {
+        setStep(5);
+      }, 5000);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [step]);
 
   if (!isVisible) return null;
 
@@ -13,12 +27,11 @@ const TaskModal: React.FC = () => {
 
   const handleFinish = () => {
     setStep(4);
-    // يمكن هنا إضافة مؤقت ليختفي المربع بعد مدة أو يظل ثابتاً كما طلبت
   };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-6" dir="rtl">
-      {/* Background Blur Overlay - Reduced blur from md to sm for a lighter feel */}
+      {/* Background Blur Overlay */}
       <div className="absolute inset-0 bg-black/30 backdrop-blur-[3px]" />
 
       {/* Modal Card */}
@@ -98,7 +111,22 @@ const TaskModal: React.FC = () => {
               <p className="text-lg font-bold text-[#333] text-center px-4">
                 الرجاء الانتظار للتأكد من عمليه الايداع
               </p>
-              <p className="text-sm text-gray-400 text-center">قد تستغرق هذه العملية عدة دقائق...</p>
+              <p className="text-sm text-gray-400 text-center">يتم الآن فحص المعاملة على الشبكة...</p>
+            </div>
+          )}
+
+          {step === 5 && (
+            <div className="py-8 space-y-4 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-2">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h2 className="text-xl font-bold text-[#333]">تم تأكيد الطلب</h2>
+              <p className="text-[#666] leading-relaxed">
+                انتظر تأكيد التحويل خلال 24 ساعة.
+              </p>
+              <p className="text-xs text-gray-400 pt-4">سيختفي هذا الإشعار تلقائياً عند إتمام عملية السحب.</p>
             </div>
           )}
         </div>
